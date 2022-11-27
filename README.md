@@ -1,4 +1,4 @@
-# Tic Tac Toe 클린 아키텍처 도입기 for C#
+# Tic Tac Toe 클린 아키텍처 도입기
 
 ## 참고 자료
 - [ ] [Enterprise Tic-Tac-Toe](https://fsharpforfunandprofit.com/posts/enterprise-tic-tac-toe/)
