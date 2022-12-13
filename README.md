@@ -15,6 +15,7 @@
 - [ ] [Minimax AI Algorithm on Tic-Tac-Toe with C#](https://github.com/blaz-cerpnjak/tictactoe-minimax)
 - [ ] [Minimax AI Algorithm on Tic-Tac-Toe with Python](https://github.com/Cledersonbc/tic-tac-toe-minimax)
 - [ ] [Tic-Tac-Toe Game to demonstrate BDD](https://github.com/elbandit/Tic-Tac-Toe)
+- [ ] [omid-ahmadpour/CleanArchitecture-Template](https://github.com/omid-ahmadpour/CleanArchitecture-Template)
 
 ### 영상
 - [ ] [기획자님들! 개발자가 아키텍처에 집착하는 이유, 쉽게 알려드립니다](https://www.youtube.com/watch?v=saxHxoUeeSw)
@@ -23,12 +24,14 @@
 - [ ] [ASP.NET 6 REST API Following CLEAN ARCHITECTURE & DDD Tutorial, Amichai Mantinband](https://www.youtube.com/watch?v=fhM0V2N1GpY&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k)
 
 ### 도서
+- [ ] [클린 아키텍처 ](http://www.yes24.com/Product/Goods/77283734)
 - [ ] [도메인 주도 설계](http://www.yes24.com/Product/Goods/5312881)
 - [ ] [도메인 주도 설계 철저 입문](http://www.yes24.com/Product/Goods/93384475)
 - [ ] [도메인 주도 설계 첫걸음](http://www.yes24.com/Product/Goods/109708596)
 - [ ] [도메인 주도 설계 구현 ](http://www.yes24.com/Product/Goods/25100510)
 - [ ] [만들면서 배우는 클린 아키텍처](http://www.yes24.com/Product/Goods/105138479)
 - [ ] [만들면서 배우는 헥사고날 아키텍처 설계와 구현](http://www.yes24.com/Product/Goods/112927162)
+- [ ] [단위 테스트](http://www.yes24.com/Product/Goods/104084175)
 
 ### 문서
 - TODO
