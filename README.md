@@ -24,6 +24,7 @@
 - [ ] [omid-ahmadpour/CleanArchitecture-Template](https://github.com/omid-ahmadpour/CleanArchitecture-Template)
 
 ### 영상
+- [ ] [Brunch Architecture / if(kakao)2022](https://www.youtube.com/watch?v=CmABbuuxvn0)
 - [ ] [기획자님들! 개발자가 아키텍처에 집착하는 이유, 쉽게 알려드립니다](https://www.youtube.com/watch?v=saxHxoUeeSw)
 - [ ] [Domain Driven Design과 적용 사례공유](https://www.youtube.com/watch?v=4QHvTeeTsj0&list=PLwe9WEhzDhwHb4uC0WGHw0cU4gRDUt71X&index=47)
 - [ ] [Domain-Driven Design, Amichai Mantinband](https://www.youtube.com/watch?v=8Z5IAkWcnIw&list=PLzYkqgWkHPKDpXETRRsFv2F9ht6XdAF3v)
