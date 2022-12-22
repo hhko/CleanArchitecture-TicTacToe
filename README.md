@@ -24,11 +24,15 @@
 - [ ] [omid-ahmadpour/CleanArchitecture-Template](https://github.com/omid-ahmadpour/CleanArchitecture-Template)
 
 ### 영상
-- [ ] [Brunch Architecture / if(kakao)2022](https://www.youtube.com/watch?v=CmABbuuxvn0)
-- [ ] [기획자님들! 개발자가 아키텍처에 집착하는 이유, 쉽게 알려드립니다](https://www.youtube.com/watch?v=saxHxoUeeSw)
-- [ ] [Domain Driven Design과 적용 사례공유](https://www.youtube.com/watch?v=4QHvTeeTsj0&list=PLwe9WEhzDhwHb4uC0WGHw0cU4gRDUt71X&index=47)
-- [ ] [Domain-Driven Design, Amichai Mantinband](https://www.youtube.com/watch?v=8Z5IAkWcnIw&list=PLzYkqgWkHPKDpXETRRsFv2F9ht6XdAF3v)
-- [ ] [ASP.NET 6 REST API Following CLEAN ARCHITECTURE & DDD Tutorial, Amichai Mantinband](https://www.youtube.com/watch?v=fhM0V2N1GpY&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k)
+- [ ] 아키텍처 | [Brunch Architecture / if(kakao)2022](https://www.youtube.com/watch?v=CmABbuuxvn0)
+- [ ] 아키텍처 | [기획자님들! 개발자가 아키텍처에 집착하는 이유, 쉽게 알려드립니다](https://www.youtube.com/watch?v=saxHxoUeeSw)
+- [ ] DDD | [Domain Driven Design과 적용 사례공유](https://www.youtube.com/watch?v=4QHvTeeTsj0&list=PLwe9WEhzDhwHb4uC0WGHw0cU4gRDUt71X&index=47)
+- [ ] DDD | [도메인 원정대](https://www.youtube.com/watch?v=kmUneexSxk0&t)
+- [ ] DDD | [마이크로서비스 개발을 위한 Domain Driven Design](https://www.youtube.com/watch?v=QUMERCN3rZs&t)
+- [ ] DDD | [공공 정보시스템을 위한 도메인 주도 설계 시작하기](https://www.youtube.com/watch?v=HmPp1TIjjbE)
+- [ ] DDD | [Domain-Driven Design시작하기](https://www.youtube.com/watch?v=td5VRmxntmw&t)
+- [ ] DDD | [Domain-Driven Design, Amichai Mantinband](https://www.youtube.com/watch?v=8Z5IAkWcnIw&list=PLzYkqgWkHPKDpXETRRsFv2F9ht6XdAF3v)
+- [ ] 아키텍처 | [ASP.NET 6 REST API Following CLEAN ARCHITECTURE & DDD Tutorial, Amichai Mantinband](https://www.youtube.com/watch?v=fhM0V2N1GpY&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k)
 
 ### 도서
 - [ ] [클린 아키텍처 ](http://www.yes24.com/Product/Goods/77283734)
