@@ -47,4 +47,8 @@
 - [ ] [단위 테스트](http://www.yes24.com/Product/Goods/104084175)
 
 ### 문서
-- TODO
+- [ ] [클린 아키텍쳐 — 소스 코드 구조는 어떻게?](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90-%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EA%B5%AC%EC%A1%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-90b872745b41)
+- [ ] [클린 코드 — Cleaning Code to Domain Model](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%BD%94%EB%93%9C-cleaning-code-to-domain-model-eed66a83c0e5)
+- [ ] [Clean Architecture : Part 1 — Database vs Domain](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%ED%8C%8C%ED%8A%B81-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-vs-%EB%8F%84%EB%A9%94%EC%9D%B8-236c7008ac83)
+- [ ] [Clean Architecture : Part 2 — The Clean Architecture](https://justwrite99.medium.com/clean-architecture-part-2-the-clean-architecture-3e2666cdce83)
+- [ ] [클린 아키텍처 by 엉클 밥](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-by-%EC%97%89%ED%81%B4-%EB%B0%A5-a6a917ff6afc)
