@@ -1,14 +1,16 @@
 # Tic Tac Toe 클린 아키텍처 도입기
 
-- [기본 단위 테스트](./UNIT-TEST.md)
-
-<br/>
-
 ## 기술 스택
 - [x] [런타임 | .NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
 - [x] [언어 | C# 11](https://learn.microsoft.com/ko-kr/dotnet/csharp/whats-new/csharp-11)
 - [x] [단위 테스트 | xUnit](https://github.com/xunit/xunit)
 - [ ] [아키텍처 테스트 | NetArchTest](https://github.com/BenMorris/NetArchTest)
+
+<br/>
+
+## 프로젝트
+- [Ch00. 클린 아키텍처 준비하기](./Ch00/)
+- [Ch01. 기술 독립적인 `Tic Tac Toe` 프로젝트 만들기](./Ch01/)
 
 <br/>
 
