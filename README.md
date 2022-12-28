@@ -1,5 +1,11 @@
 # Tic Tac Toe 클린 아키텍처 도입기
 
+## 프로젝트
+- [Ch00. 클린 아키텍처 준비하기](./Ch00/)
+- [Ch01. 기술 독립적인 `Tic Tac Toe` 프로젝트 만들기](./Ch01/)
+
+<br/>
+
 ## 기술 스택
 - [x] [.NET 7.0 런타임](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
 - [x] [C# 11 언어](https://learn.microsoft.com/ko-kr/dotnet/csharp/whats-new/csharp-11)
@@ -7,12 +13,6 @@
 - [x] [xUnit 패키지](https://github.com/xunit/xunit)
 - [x] [Fluent Assertions 패키지](https://github.com/fluentassertions/fluentassertions)
 - [ ] [NetArchTest 패키지](https://github.com/BenMorris/NetArchTest)
-
-<br/>
-
-## 프로젝트
-- [Ch00. 클린 아키텍처 준비하기](./Ch00/)
-- [Ch01. 기술 독립적인 `Tic Tac Toe` 프로젝트 만들기](./Ch01/)
 
 <br/>
 

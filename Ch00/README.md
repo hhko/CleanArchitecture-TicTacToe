@@ -5,6 +5,9 @@
   - `Input Adapter`
   - `Output Adapter`
 - `Use Cases`
-  - `Input Port`
-  - `Output Port`
+  - `Input Port(interface)`
+  - `Output Port(interface)`
+  - `Use Case`
 - `Entities`
+  - `Entity`
+  - `Value Object`
