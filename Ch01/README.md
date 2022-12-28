@@ -21,14 +21,15 @@
 
 ## 솔루션 구성
 ### 프로젝트 폴더 구성
-> Ch01
-> ├─
-> ├─Src
-> │  ├─Ch01.Entities
-> │  └─Ch01.UseCases
-> └─Tests
->     ├─Ch01.Entities.UnitTest
->     └─Ch01.UseCases.UnitTest
+```
+Ch01  
+ ├─Src  
+ │  ├─Ch01.Entities  
+ │  └─Ch01.UseCases  
+ └─Tests  
+    ├─Ch01.Entities.UnitTest  
+    └─Ch01.UseCases.UnitTest  
+```
 
 ### 프로젝트 생성 명령
 ```shell
