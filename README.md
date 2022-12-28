@@ -1,10 +1,12 @@
 # Tic Tac Toe 클린 아키텍처 도입기
 
 ## 기술 스택
-- [x] [런타임 | .NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
-- [x] [언어 | C# 11](https://learn.microsoft.com/ko-kr/dotnet/csharp/whats-new/csharp-11)
-- [x] [단위 테스트 | xUnit](https://github.com/xunit/xunit)
-- [ ] [아키텍처 테스트 | NetArchTest](https://github.com/BenMorris/NetArchTest)
+- [x] [.NET 7.0 런타임](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+- [x] [C# 11 언어](https://learn.microsoft.com/ko-kr/dotnet/csharp/whats-new/csharp-11)
+- [x] [SmartEnum 패키지](https://github.com/ardalis/SmartEnum)
+- [x] [xUnit 패키지](https://github.com/xunit/xunit)
+- [x] [Fluent Assertions 패키지](https://github.com/fluentassertions/fluentassertions)
+- [ ] [NetArchTest 패키지](https://github.com/BenMorris/NetArchTest)
 
 <br/>
 

@@ -1,4 +1,4 @@
-namespace Ch01.Entities.UnitTest;
+namespace TicTacToe.Entities.UnitTest;
 
 public class UnitTest1
 {
