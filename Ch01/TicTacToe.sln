@@ -5,15 +5,15 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{D535C67E-7D11-424E-8F73-ABDD9B8851D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch01.Entities", "Src\Ch01.Entities\Ch01.Entities.csproj", "{C2B76D7E-129A-41B3-B1E9-B7DC2D4D3222}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Entities", "Src\TicTacToe.Entities\TicTacToe.Entities.csproj", "{C2B76D7E-129A-41B3-B1E9-B7DC2D4D3222}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch01.UseCases", "Src\Ch01.UseCases\Ch01.UseCases.csproj", "{CDE8DBC0-8B0A-43EE-9114-4BB48522AAE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.UseCases", "Src\TicTacToe.UseCases\TicTacToe.UseCases.csproj", "{CDE8DBC0-8B0A-43EE-9114-4BB48522AAE2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2DDA818B-8A4F-44F8-A34C-B203E8524C5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch01.Entities.UnitTest", "Tests\Ch01.Entities.UnitTest\Ch01.Entities.UnitTest.csproj", "{8CE207C6-B9EC-457D-A8C1-5A30274C027E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Entities.UnitTest", "Tests\TicTacToe.Entities.UnitTest\TicTacToe.Entities.UnitTest.csproj", "{8CE207C6-B9EC-457D-A8C1-5A30274C027E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch01.UseCases.UnitTest", "Tests\Ch01.UseCases.UnitTest\Ch01.UseCases.UnitTest.csproj", "{DEC28CFD-62CA-4BE2-B546-AA1C2EBCB2AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.UseCases.UnitTest", "Tests\TicTacToe.UseCases.UnitTest\TicTacToe.UseCases.UnitTest.csproj", "{DEC28CFD-62CA-4BE2-B546-AA1C2EBCB2AE}"
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution

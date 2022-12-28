@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\Ch01.UseCases\Ch01.UseCases.csproj" />
-    <ProjectReference Include="..\..\Src\Ch01.Entities\Ch01.Entities.csproj" />
+    <ProjectReference Include="..\..\Src\TicTacToe.UseCases\TicTacToe.UseCases.csproj" />
+    <ProjectReference Include="..\..\Src\TicTacToe.Entities\TicTacToe.Entities.csproj" />
   </ItemGroup>
 
 </Project>

@@ -22,36 +22,36 @@
 ## 솔루션 구성
 ### 프로젝트 폴더 구성
 ```
-Ch01  
+TicTacToe  
  ├─Src  
- │  ├─Ch01.Entities  
- │  └─Ch01.UseCases  
+ │  ├─TicTacToe.Entities  
+ │  └─TicTacToe.UseCases  
  └─Tests  
-    ├─Ch01.Entities.UnitTest  
-    └─Ch01.UseCases.UnitTest  
+    ├─TicTacToe.Entities.UnitTest  
+    └─TicTacToe.UseCases.UnitTest  
 ```
 
 ### 프로젝트 생성 명령
 ```shell
 # 솔루션 생성
-# - Ch01 폴더 생성
-# - Ch01 플더에서 명령 실행
+# - TicTacToe 폴더 생성
+# - TicTacToe 플더에서 명령 실행
 dotnet new sln -n TicTacToe
 
 # 프로젝트 생성
 # - Src 폴더 생성
 # - Src 폴더에서 명령 실행
-dotnet new classlib -o Ch01.Entities
-dotnet new classlib -o Ch01.UseCases
+dotnet new classlib -o TicTacToe.Entities
+dotnet new classlib -o TicTacToe.UseCases
 
 # 단위 테스트 프로젝트 생성
 # - Tests 폴더 생성
 # - Tests 폴더에서 명령 실행
-dotnet new xunit -o Ch01.Entities.UnitTest
-dotnet new xunit -o Ch01.UseCases.UnitTest
+dotnet new xunit -o TicTacToe.Entities.UnitTest
+dotnet new xunit -o TicTacToe.UseCases.UnitTest
 
 # 솔루션에 모든 프로젝트 추가
-# - Ch01 폴더에서 명령 실행(.sln 파일이 있는 경로)
+# - TicTacToe 폴더에서 명령 실행(.sln 파일이 있는 경로)
 dotnet sln add (ls -r **\*.csproj)
 
 # 빌드 & 테스트
@@ -61,13 +61,13 @@ dotnet test
 
 ### 프로젝트 참조 명령
 ```shell
-dotnet add .\Src\Ch01.UseCases\ reference .\Src\Ch01.Entities\
-dotnet add .\Tests\Ch01.UseCases.UnitTest\ reference .\Src\Ch01.UseCases\
-dotnet add .\Tests\Ch01.UseCases.UnitTest\ reference .\Src\Ch01.Entities\
+dotnet add .\Src\TicTacToe.UseCases\ reference .\Src\TicTacToe.Entities\
+dotnet add .\Tests\TicTacToe.UseCases.UnitTest\ reference .\Src\TicTacToe.UseCases\
+dotnet add .\Tests\TicTacToe.UseCases.UnitTest\ reference .\Src\TicTacToe.Entities\
 
-dotnet add .\Src\Ch01.Entities\ package Ardalis.SmartEnum
-dotnet add .\Ch01.Entities.UnitTest\ package FluentAssertions --version 6.8.0
-dotnet add .\Ch01.UseCases.UnitTest\ package FluentAssertions --version 6.8.0
+dotnet add .\Src\TicTacToe.Entities\ package Ardalis.SmartEnum
+dotnet add .\TicTacToe.Entities.UnitTest\ package FluentAssertions --version 6.8.0
+dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8.0
 ```
 
 <br/>

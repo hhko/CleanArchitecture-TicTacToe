@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Ch01.Entities\Ch01.Entities.csproj" />
+    <ProjectReference Include="..\TicTacToe.Entities\TicTacToe.Entities.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
