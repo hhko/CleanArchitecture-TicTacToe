@@ -1,18 +1,30 @@
-# Tic Tac Toe 클린 아키텍처 도입기
+# 클린 아키텍처 도입기 Tic Tac Toe
 
 ## 프로젝트
-- [Ch00. 클린 아키텍처 준비하기](./Ch00/)
-- [Ch01. 기술 독립적인 `Tic Tac Toe` 프로젝트 만들기](./Ch01/)
+- 몸 풀기
+  - [Chapter 00. 클린 아키텍처 준비](./Ch00/)
+- 기술 독립적인
+  - [ ] [Chapter 01. 객체지향 `Tic Tac Toe`](./Ch01/)
+  - [ ] Chapter 02. 함수형 `Tic Tac Toe`
+  - [ ] Chapter 03. 메시지지향 `Tic Tac Toe`
+- 기술 의존적인
+  - [ ] Chapter 04. Repository `Tic Tac Toe`
+  - [ ] Chapter 05. Web UI `Tic Tac Toe`
+  - [ ] Chapter 06. Desktop UI `Tic Tac Toe`
 
 <br/>
 
 ## 기술 스택
-- [x] [.NET 7.0 런타임](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
-- [x] [C# 11 언어](https://learn.microsoft.com/ko-kr/dotnet/csharp/whats-new/csharp-11)
-- [x] [SmartEnum 패키지](https://github.com/ardalis/SmartEnum)
-- [x] [xUnit 패키지](https://github.com/xunit/xunit)
-- [x] [Fluent Assertions 패키지](https://github.com/fluentassertions/fluentassertions)
-- [ ] [NetArchTest 패키지](https://github.com/BenMorris/NetArchTest)
+- 기본
+  - [x] [.NET 7.0 런타임](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+  - [x] [C# 11 언어](https://learn.microsoft.com/ko-kr/dotnet/csharp/whats-new/csharp-11)
+- 설계
+  - [x] [SmartEnum 패키지](https://github.com/ardalis/SmartEnum)
+  - [ ] [MediatR](https://github.com/jbogard/MediatR)
+- 테스트 자동화
+  - [x] [xUnit 패키지](https://github.com/xunit/xunit)
+  - [x] [Fluent Assertions 패키지](https://github.com/fluentassertions/fluentassertions)
+  - [ ] [NetArchTest 패키지](https://github.com/BenMorris/NetArchTest)
 
 <br/>
 

@@ -86,15 +86,15 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
 - [ ] 모든 공간이 채워지고 승자가 없으면 게임은 무승부가 된다.
 
 ### UseCase 단위 테스트 최종
-- 먼저 플레이를 시작하는 플레이어는 X이다.
+- [x] 먼저 플레이를 시작하는 플레이어는 X이다.
+  ```cs
+  public void Player_X_Is_The_First_To_Place_A_Marker()
   ```
-  Player_X_Is_The_First_To_Place_A_Marker
+- [x] **첫 번째 플레이어는 어디에든 표시할 수 있다(추가된 단위 테스트).**
+  ```cs
+  public void The_First_Player_Can_Place_Marker_Anywhere()
   ```
-- 첫 번째 플레이어는 어디에든 표시할 수 있다.
-  ```
-  The_First_Player_Can_Place_Marker_Anywhere
-  ```
-- 플레이어는 이미 채워진 공간에는 표시를 할 수 없다.
-  ```
-  After_A_Player_Places_A_Marker_The_Square_Is_Unavailable
+- [x] 플레이어는 이미 채워진 공간에는 표시를 할 수 없다.
+  ```cs
+  public void After_A_Player_Places_A_Marker_The_Square_Is_Unavailable()
   ```
