@@ -95,7 +95,7 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
   ```cs
   public void Player_X_Is_The_First_To_Place_A_Marker()
   ```
-- [x] 01.2 **추가됨 : 첫 번째 플레이어는 어디에든 표시할 수 있다.**
+- [x] 01-2 **추가됨 : 첫 번째 플레이어는 어디에든 표시할 수 있다.**
   ```cs
   public void The_First_Player_Can_Place_Marker_Anywhere()
   ```
