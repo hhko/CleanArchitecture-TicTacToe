@@ -1,4 +1,4 @@
-# 기술 독립적인 `Tic Tac Toe` 프로젝트 만들기
+# Chapter 01. 기술 독립적인 | 객체지향 `Tic Tac Toe`
 
 ## 목차
 1. 목표
