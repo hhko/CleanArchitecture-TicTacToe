@@ -13,11 +13,11 @@ public class TicTacToeUseCase
 
     public bool CanPlaceMarkerAt(Row row, Column column)
     {
-        return _board[row.Value, column.Value] == 0;
+        return _board[row, column] == 0;
     }
 
     public void PlaceMarkerAt(Row row, Column column)
     {
-        _board[row.Value, column.Value] = WhoseTurn();
+        _board[row, column] = WhoseTurn();
     }
 }
