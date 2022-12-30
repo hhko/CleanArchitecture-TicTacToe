@@ -76,8 +76,8 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
 ### UseCase 단위 테스트 초안
 - [x] 먼저 플레이를 시작하는 플레이어는 X이다.
 - [x] 플레이어는 이미 채워진 공간에는 표시를 할 수 없다.
-- [ ] 플레이어 X가 빈 공간에 X 표시를 하면 이 공간은 더 이상 사용할 수 없다.
-- [ ] 플레이어 O가 플레이어 X가 표시를 한 후에 표시할 수 있다.
+- [x] _플레이어 X가 빈 공간에 X 표시를 하면 이 공간은 더 이상 사용할 수 없다._
+- [x] 플레이어 O가 플레이어 X가 표시를 한 후에 표시할 수 있다.
 - [ ] 플레이어는 존재하지 않는 공간에는 표시할 수 없다.
 - [ ] 이미 사용된 공간에 표시를 하려고 하면 에외가 발생한다.
 - [ ] 플레이어 X가 한 행에 세 게의 X 표시를 모두 하면 플레이어 X가 승리한다.
@@ -90,7 +90,7 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
   ```cs
   public void Player_X_Is_The_First_To_Place_A_Marker()
   ```
-- [x] **첫 번째 플레이어는 어디에든 표시할 수 있다(추가된 단위 테스트).**
+- [x] **추가됨 : 첫 번째 플레이어는 어디에든 표시할 수 있다.**
   ```cs
   public void The_First_Player_Can_Place_Marker_Anywhere()
   ```
@@ -98,3 +98,25 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
   ```cs
   public void After_A_Player_Places_A_Marker_The_Square_Is_Unavailable()
   ```
+- [x] **변경된 : 이미 표시된 것에 플레이어가 표시하기를 원한다면 예외를 발생 시킨다.**
+  ```cs
+  public void Exception_Will_Be_Thrown_If_Player_Tries_To_Place_Marker_In_A_Taken_Square()
+  ```
+  - 이전 : _플레이어 X가 빈 공간에 X 표시를 하면 이 공간은 더 이상 사용할 수 없다._
+  - 이후 : 이미 표시된 것에 플레이어가 표시하기를 원한다면 예외를 발생 시킨다.
+- [x] 플레이어 O가 플레이어 X가 표시를 한 후에 표시할 수 있다.
+  ```cs
+  public void Player_O_Will_Be_Next_To_Take_A_Turn_After_Player_X_Has_Placed_A_Marker()
+  ```
+
+<br/>
+
+## TODO
+- VSCode task 통합 : 빌드, 테스트
+- VSCode Unit Test 확장 도구
+- VSCode Code Coverage
+- dotnet CLI test 로그
+- dotnet CLI Code Coverage
+- GitHub CI/CD
+- Clean Architecture 다이어그램과 Layer 설명
+- UseCase 개념(Application Service)으로 리팩토링
