@@ -1,6 +1,9 @@
 # Chapter 01. 기술 독립적인 객체지향 `Tic Tac Toe`
-> **UseCases와 Entities 레이어만 구현한다.**
-> Adapters(Presentation, Infrastructure) 레이어는 제외한다.
+> **기술 독립적인란?**
+> - Core 레이어인 UseCases와 Entities 레이어만 구현한다.  
+> - 구체적인 기술을 구현하는 Adapters(Presentation, Infrastructure) 레이어는 구현하지 않는다.
+
+<br/>
 
 ## 목차
 1. 목표
