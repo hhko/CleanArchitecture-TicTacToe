@@ -1,6 +1,6 @@
 # Chapter 01. 기술 독립적인 객체지향 `Tic Tac Toe`
-> **기술 독립적인란?**
-> - Core 레이어인 UseCases와 Entities 레이어만 구현한다.  
+> **기술 독립적인란?**  
+> - Core 레이어인 UseCases와 Entities 레이어만 구현한다.
 > - 구체적인 기술을 구현하는 Adapters(Presentation, Infrastructure) 레이어는 구현하지 않는다.
 
 <br/>
@@ -70,7 +70,7 @@ dotnet add .\Src\TicTacToe.UseCases\ reference .\Src\TicTacToe.Entities\
 dotnet add .\Tests\TicTacToe.UseCases.UnitTest\ reference .\Src\TicTacToe.UseCases\
 dotnet add .\Tests\TicTacToe.UseCases.UnitTest\ reference .\Src\TicTacToe.Entities\
 
-dotnet add .\Src\TicTacToe.Entities\ package Ardalis.SmartEnum
+dotnet add .\Src\TicTacToe.Entities\ package Ardalis.SmartEnum --version 2.1.0
 dotnet add .\TicTacToe.Entities.UnitTest\ package FluentAssertions --version 6.8.0
 dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8.0
 ```
@@ -117,6 +117,9 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
 <br/>
 
 ## TODO
+- Ardalis.SmartEnum switch 사용법 확인?
+- 단위 테스트 구현
+- 액션아이템과 구현 연동
 - VSCode task 통합 : 빌드, 테스트
 - VSCode Unit Test 확장 도구
 - VSCode Code Coverage
