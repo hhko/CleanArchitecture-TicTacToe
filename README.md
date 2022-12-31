@@ -43,6 +43,9 @@
 - [ ] [Minimax AI Algorithm on Tic-Tac-Toe with Python](https://github.com/Cledersonbc/tic-tac-toe-minimax)
 - [ ] [Tic-Tac-Toe Game to demonstrate BDD](https://github.com/elbandit/Tic-Tac-Toe)
 - [ ] [omid-ahmadpour/CleanArchitecture-Template](https://github.com/omid-ahmadpour/CleanArchitecture-Template)
+- [ ] [dotnet-tic-tac-toe](https://github.com/madetech/dotnet-tic-tac-toe)
+- [ ] [Using Blazor WebAssembly and C# to Build Tic-Tac-Toe in .NET Core](https://exceptionnotfound.net/using-blazor-webassembly-and-csharp-to-play-tic-tac-toe-in-dotnet-core/)
+- [ ] [Domain-Driven-Design-Example](https://github.com/zkavtaskin/Domain-Driven-Design-Example)
 
 ### 영상
 - [ ] 아키텍처 | [Brunch Architecture / if(kakao)2022](https://www.youtube.com/watch?v=CmABbuuxvn0)
@@ -71,3 +74,7 @@
 - [ ] [Clean Architecture : Part 1 — Database vs Domain](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%ED%8C%8C%ED%8A%B81-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-vs-%EB%8F%84%EB%A9%94%EC%9D%B8-236c7008ac83)
 - [ ] [Clean Architecture : Part 2 — The Clean Architecture](https://justwrite99.medium.com/clean-architecture-part-2-the-clean-architecture-3e2666cdce83)
 - [ ] [클린 아키텍처 by 엉클 밥](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-by-%EC%97%89%ED%81%B4-%EB%B0%A5-a6a917ff6afc)
+- [ ] [Algorithm to Detect A tic tac toe Winner](https://jayeshkawli.ghost.io/tic-tac-toe/)
+- [ ] [Clean architecture series— Part 1](https://pereiren.medium.com/clean-architecture-series-part-1-f34ef6b04b62)
+- [ ] [Clean architecture series— Part 2](https://pereiren.medium.com/clean-architecture-series-part-2-56197c4b9d58)
+- [ ] [Clean architecture series— Part 3](https://pereiren.medium.com/clean-architecture-series-part-3-a0c150551e5f)
