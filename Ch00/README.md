@@ -11,3 +11,6 @@
 - `Entities`
   - `Entity`
   - `Value Object`
+
+## 참고 자료
+- [Use code coverage for unit testing](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows)

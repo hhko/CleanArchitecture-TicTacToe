@@ -20,11 +20,16 @@
   - [x] [C# 11 언어](https://learn.microsoft.com/ko-kr/dotnet/csharp/whats-new/csharp-11)
 - 설계
   - [x] [SmartEnum 패키지](https://github.com/ardalis/SmartEnum)
-  - [ ] [MediatR](https://github.com/jbogard/MediatR)
+  - [ ] [MediatR 패키지](https://github.com/jbogard/MediatR)
+  - [ ] [Ardalis.Result 패키지](https://github.com/ardalis/result)
+  - [ ] [FluentValidation 패키지](https://github.com/FluentValidation/FluentValidation)
 - 테스트 자동화
   - [x] [xUnit 패키지](https://github.com/xunit/xunit)
   - [x] [Fluent Assertions 패키지](https://github.com/fluentassertions/fluentassertions)
   - [ ] [NetArchTest 패키지](https://github.com/BenMorris/NetArchTest)
+  - [ ] [AutoFixture 패키지](https://github.com/AutoFixture/AutoFixture)
+  - [ ] [coverlet 패키지](https://github.com/coverlet-coverage/coverlet)
+  - [ ] [ReportGenerator 패키지](https://github.com/danielpalme/ReportGenerator)
 
 <br/>
 
