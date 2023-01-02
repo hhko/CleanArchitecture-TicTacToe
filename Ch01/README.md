@@ -81,21 +81,21 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
 ### UseCase 단위 테스트 초안
 - [x] 01. 먼저 플레이를 시작하는 플레이어는 X이다.
 - [x] 02. 플레이어는 이미 채워진 공간에는 표시를 할 수 없다.
-- [x] 03. _플레이어 X가 빈 공간에 X 표시를 하면 이 공간은 더 이상 사용할 수 없다._
+- [ ] 03. 플레이어 X가 빈 공간에 X 표시를 하면 이 공간은 더 이상 사용할 수 없다.
 - [x] 04. 플레이어 O가 플레이어 X가 표시를 한 후에 표시할 수 있다.
-- [ ] 05. 플레이어는 존재하지 않는 공간에는 표시할 수 없다.
-- [ ] 06. 이미 사용된 공간에 표시를 하려고 하면 에외가 발생한다.
+- [x] 05. ~~플레이어는 존재하지 않는 공간에는 표시할 수 없다.~~
+- [x] 06. 이미 사용된 공간에 표시를 하려고 하면 에외가 발생한다.
 - [ ] 07. 플레이어 X가 한 행에 세 게의 X 표시를 모두 하면 플레이어 X가 승리한다.
 - [ ] 08. 플레이어 X가 한 열에 세 게의 X 표시를 모두 하면 플레이어 X가 승리한다.
 - [ ] 09. 플레이어 X가 대각선으로 세 개의 X 표시를 모두 하면 플레이어 X가 승리한다.
 - [ ] 10. 모든 공간이 채워지고 승자가 없으면 게임은 무승부가 된다.
 
 ### UseCase 단위 테스트 최종
-- [x] 01. 먼저 플레이를 시작하는 플레이어는 X이다.
+- [x] 01-1. 먼저 플레이를 시작하는 플레이어는 X이다.
   ```cs
   public void Player_X_Is_The_First_To_Place_A_Marker()
   ```
-- [x] 01-2 **추가됨 : 첫 번째 플레이어는 어디에든 표시할 수 있다.**
+- [x] 01-2. **추가됨 : 첫 번째 플레이어는 어디에든 표시할 수 있다.**
   ```cs
   public void The_First_Player_Can_Place_Marker_Anywhere()
   ```
@@ -103,20 +103,38 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
   ```cs
   public void After_A_Player_Places_A_Marker_The_Square_Is_Unavailable()
   ```
-- [x] 03. **변경된 : 이미 표시된 것에 플레이어가 표시하기를 원한다면 예외를 발생 시킨다.**
-  ```cs
-  public void Exception_Will_Be_Thrown_If_Player_Tries_To_Place_Marker_In_A_Taken_Square()
-  ```
-  - 이전 : _플레이어 X가 빈 공간에 X 표시를 하면 이 공간은 더 이상 사용할 수 없다._
-  - 이후 : 이미 표시된 것에 플레이어가 표시하기를 원한다면 예외를 발생 시킨다.
+- [ ] 03. 플레이어 X가 빈 공간에 X 표시를 하면 이 공간은 더 이상 사용할 수 없다.
 - [x] 04. 플레이어 O가 플레이어 X가 표시를 한 후에 표시할 수 있다.
   ```cs
   public void Player_O_Will_Be_Next_To_Take_A_Turn_After_Player_X_Has_Placed_A_Marker()
+  ```
+- [x] 05. ~~플레이어는 존재하지 않는 공간에는 표시할 수 없다.~~
+  ```cs
+  public void A_Player_Cannot_Place_A_Marker_In_A_Zone_Than_Does_Not_Exist()
+  ```
+  > 물리적(컴파일 타임과 런타임)으로 존재할 수 없는 테스트 시나리오이다.
+  - dotnet build 실패(`컴파일 타임 에러`) : int -> Row 타입으로 변환할 수 없다.
+    ```cs
+    // 'int'에서 'TicTacToe.Entities.Row'(으)로 변환할 수 없습니다.
+    bool result = ticTacToe.CanPlaceMarkerAt(100, 200);
+    ```
+  - dotnet test 실패(`런타임 에러`) : 올바른 객체를 생성할 수 없다.
+    ```cs
+    // Ardalis.SmartEnum.SmartEnumNotFoundException : No Row with Value 100 found.
+    bool result = ticTacToe.CanPlaceMarkerAt(Row.FromValue(100), Column.FromValue(200));
+    ```
+- [x] 06(03). 이미 사용된 공간에 표시를 하려고 하면 에외가 발생한다.
+```cs
+  public void Exception_Will_Be_Thrown_If_Player_Tries_To_Place_Marker_In_A_Taken_Square()
   ```
 
 <br/>
 
 ## TODO
+- enum -> strongly typed enum 설계 개념 정리
+  - https://ardalis.com/enum-alternatives-in-c/
+  - https://www.infoworld.com/article/3198453/how-to-implement-a-type-safe-enum-pattern-in-c.html
+  - https://www.youtube.com/watch?v=v6cYTcEfZ8A
 - Ardalis.SmartEnum switch 사용법 확인?
 - 단위 테스트 구현
 - 액션아이템과 구현 연동

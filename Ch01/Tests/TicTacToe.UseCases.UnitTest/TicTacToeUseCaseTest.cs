@@ -13,7 +13,7 @@ public class TicTacToeUseCaseTest
         _output = output;
     }
 
-    // 먼저 플레이를 시작하는 플레이어는 X이다.
+    // 01-1. 먼저 플레이를 시작하는 플레이어는 X이다.
     [Fact]
     public void Player_X_Is_The_First_To_Place_A_Marker()
     {
@@ -26,7 +26,7 @@ public class TicTacToeUseCaseTest
         ticTacToe.WhoseTurn().Should().Be(Player.X);
     }
 
-    // 첫 번째 플레이어는 어디에든 표시할 수 있다.
+    // 01-2. 첫 번째 플레이어는 어디에든 표시할 수 있다.
     [Fact]
     public void The_First_Player_Can_Place_Marker_Anywhere()
     {
@@ -47,7 +47,7 @@ public class TicTacToeUseCaseTest
         ticTacToe.CanPlaceMarkerAt(Row.Three, Column.Three).Should().BeTrue();
     }
 
-    // 플레이어는 이미 채워진 공간에는 표시를 할 수 없다.
+    // 02. 플레이어는 이미 채워진 공간에는 표시를 할 수 없다.
     [Fact]
     public void After_A_Player_Places_A_Marker_The_Square_Is_Unavailable()
     {
@@ -63,7 +63,7 @@ public class TicTacToeUseCaseTest
         ticTacToe.CanPlaceMarkerAt(rowToPlace, columnToPlace).Should().BeFalse();
     }
 
-    // 이미 표시된 것에 플레이어가 표시하기를 원한다면 예외를 발생 시킨다.
+    // 06. 이미 사용된 공간에 표시를 하려고 하면 에외가 발생한다.
     [Fact]
     public void Exception_Will_Be_Thrown_If_Player_Tries_To_Place_Marker_In_A_Taken_Square()
     {
@@ -81,7 +81,7 @@ public class TicTacToeUseCaseTest
         act.Should().Throw<ApplicationException>();
     }
 
-    // 플레이어 O가 플레이어 X가 표시를 한 후에 표시할 수 있다.
+    // 04. 플레이어 O가 플레이어 X가 표시를 한 후에 표시할 수 있다.
     [Fact]
     public void Player_O_Will_Be_Next_To_Take_A_Turn_After_Player_X_Has_Placed_A_Marker()
     {
@@ -98,4 +98,34 @@ public class TicTacToeUseCaseTest
         // Assert
         ticTacToe.WhoseTurn().Should().Be(Player.O);
     }
+
+    // // 05. 플레이어는 존재하지 않는 공간에는 표시할 수 없다.
+    // [Fact]
+    // public void A_Player_Cannot_Place_A_Marker_In_A_Zone_That_Does_Not_Exist()
+    // {
+    //     // Arrange
+    //     TicTacToeUseCase ticTacToe = new TicTacToeUseCase();
+    //
+    //     // Act : dotnet build 실패
+    //     // 'int'에서 'TicTacToe.Entities.Row'(으)로 변환할 수 없습니다.
+    //     bool result = ticTacToe.CanPlaceMarkerAt(100, 200);
+    //
+    //     // Assert
+    //     result.Should().BeFalse();
+    // }
+
+    // // 05. 플레이어는 존재하지 않는 공간에는 표시할 수 없다.
+    // [Fact]
+    // public void A_Player_Cannot_Place_A_Marker_In_A_Zone_That_Does_Not_Exist()
+    // {
+    //     // Arrange
+    //     TicTacToeUseCase ticTacToe = new TicTacToeUseCase();
+    //
+    //     // Act : dotnet test 실패
+    //     // Ardalis.SmartEnum.SmartEnumNotFoundException : No Row with Value 100 found.
+    //     bool result = ticTacToe.CanPlaceMarkerAt(Row.FromValue(100), Column.FromValue(200));
+    //
+    //     // Assert
+    //     result.Should().BeFalse();
+    // }
 }
