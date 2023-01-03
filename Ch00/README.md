@@ -12,6 +12,14 @@
    - 사용 시나리오란?
      - 기술 의존적인 코드가 통합하기 위해 인터페이스(Port)가 정의된 기술 독립적인 코드다.
      - 사용자가 요구하여 시스템이 수행하는 일(인식가능한 기능 단위)이다.
+     ```
+     A use case corresponds to a set of behaviors 
+         that the system may perform in interaction with its actors, 
+         and which produces an observable result 
+         that contributes to its goals. 
+     Actors represent the role 
+         that human users or other systems have in the interaction.
+     ```
 1. **도메인 중심**
    - 기술 의존적인 코드 > 사용 시나리오 > 기술 독립적인 코드(중심)
 1. **의존성 방향**
@@ -35,4 +43,5 @@
 
 ## 참고 자료
 - [Use code coverage for unit testing](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows)
-- [유스 케이스](https://ko.wikipedia.org/wiki/%EC%9C%A0%EC%8A%A4_%EC%BC%80%EC%9D%B4%EC%8A%A4)
+- [유스 케이스 wiki](https://ko.wikipedia.org/wiki/%EC%9C%A0%EC%8A%A4_%EC%BC%80%EC%9D%B4%EC%8A%A4)
+- [Use Case wiki](https://en.wikipedia.org/wiki/Use_case)
