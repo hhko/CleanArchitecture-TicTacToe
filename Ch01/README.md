@@ -137,11 +137,6 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
 <br/>
 
 ## TODO
-- enum -> strongly typed enum 설계 개념 정리
-  - https://ardalis.com/enum-alternatives-in-c/
-  - https://www.infoworld.com/article/3198453/how-to-implement-a-type-safe-enum-pattern-in-c.html
-  - https://www.youtube.com/watch?v=v6cYTcEfZ8A
-- Ardalis.SmartEnum switch 사용법 확인?
 - 단위 테스트 구현
 - 액션아이템과 구현 연동
 - if ... -> switch 구분 변경
