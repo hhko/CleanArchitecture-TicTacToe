@@ -53,6 +53,7 @@
 - [ ] [dotnet-tic-tac-toe](https://github.com/madetech/dotnet-tic-tac-toe)
 - [ ] [Using Blazor WebAssembly and C# to Build Tic-Tac-Toe in .NET Core](https://exceptionnotfound.net/using-blazor-webassembly-and-csharp-to-play-tic-tac-toe-in-dotnet-core/)
 - [ ] [Domain-Driven-Design-Example](https://github.com/zkavtaskin/Domain-Driven-Design-Example)
+- [ ] [Orleans TicTacToe web-based game](https://github.com/dotnet/samples/tree/main/orleans/TicTacToe)
 
 ### 영상
 - [ ] 아키텍처 | [Brunch Architecture / if(kakao)2022](https://www.youtube.com/watch?v=CmABbuuxvn0)
