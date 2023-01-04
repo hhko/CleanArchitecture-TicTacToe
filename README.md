@@ -1,5 +1,7 @@
 # 클린 아키텍처 도입기 Tic Tac Toe
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/400px-Tic_tac_toe.svg.png" width=15%/>
+
 ## 프로젝트
 - Part 1. 몸 풀기 코드
   - [ ] [Chapter 00. 클린 아키텍처 준비](./Ch00/)
