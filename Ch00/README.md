@@ -15,15 +15,14 @@
      ```
      A use case corresponds to a set of behaviors 
          that the system may perform in interaction with its actors, 
-         and which produces an observable result 
-         that contributes to its goals. 
+         and which produces an observable result that contributes to its goals. 
      Actors represent the role 
          that human users or other systems have in the interaction.
      ```
 1. **핵심**
    - `1.` 기술 독립적인 코드 > `2.` 유스 케이스 > `3.` 기술 의존적인 코드
    - 핵심이란?
-     - 비즈니스 요구사항을 코드로 표현할 때 우선 순위
+     - 비즈니스 요구사항을 코드로 표현할 때 가장 중심이 되 것
 1. **의존성 방향**
    - 기술 의존적인 코드(Adapters : 입력) `→` 유스 케이스 `→` 기술 독립적인 코드(Entities)
    - 기술 의존적인 코드(Adapters : 출력) `→` 유스 케이스 `→` 기술 독립적인 코드(Entities)
