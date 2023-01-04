@@ -129,7 +129,7 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
   ```cs
   public void If_Player_X_Gets_Three_Xs_In_A_Row_Then_The_Game_Is_Won_By_Player_X()
   ```
-- [x] 07-2. 누군가 승리하거나 혹은 게임이 비기지 않은 이상 플레이어 X나 플레이어 O가 표수해야 할 순서인 상태가 있을 수 있다
+- [x] 07-2. 누군가 승리하거나 혹은 게임이 비기지 않은 이상 플레이어 X나 플레이어 O가 표시해야 할 순서인 상태가 있을 수 있다
   ```cs
   public void The_Game_Status_Should_Be_Awaiting_Either_Player_X_Or_O_If_The_Game_Is_Not_Won_Or_Drawn()
   ```
