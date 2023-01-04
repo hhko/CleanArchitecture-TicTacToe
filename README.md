@@ -1,16 +1,21 @@
 # 클린 아키텍처 도입기 Tic Tac Toe
 
 ## 프로젝트
-- 몸 풀기
-  - [Chapter 00. 클린 아키텍처 준비](./Ch00/)
-- 기술 독립적인
-  - [ ] [Chapter 01. 객체지향 `Tic Tac Toe`](./Ch01/)
-  - [ ] Chapter 02. 함수형 `Tic Tac Toe`
-  - [ ] Chapter 03. 메시지지향 `Tic Tac Toe`
-- 기술 의존적인
-  - [ ] Chapter 04. Repository `Tic Tac Toe`
-  - [ ] Chapter 05. Web UI `Tic Tac Toe`
-  - [ ] Chapter 06. Desktop UI `Tic Tac Toe`
+- Part 1. 몸 풀기 코드
+  - [ ] [Chapter 00. 클린 아키텍처 준비](./Ch00/)
+  - [ ] Strongly Typed Enum Pattern
+  - [ ] Value Object
+  - [ ] Entity
+  - [ ] Domain Service
+- Part 2. 기술 독립적인 코드
+  - [ ] [Chapter 01. 객체지향 Tic Tac Toe](./Ch01/)
+  - [ ] Chapter 02. 함수형 Tic Tac Toe
+  - [ ] Chapter 03. 메시지지향 Tic Tac Toe
+- Part 3. 기술 의존적인 코드
+  - [ ] Chapter 04. Repository Tic Tac Toe
+  - [ ] Chapter 05. Web UI Tic Tac Toe
+  - [ ] Chapter 06. Desktop UI Tic Tac Toe
+  - [ ] Chapter 07. Hybrid UI(Web & Desktop UI) Tic Tac Toe
 
 <br/>
 
@@ -30,6 +35,8 @@
   - [ ] [AutoFixture 패키지](https://github.com/AutoFixture/AutoFixture)
   - [ ] [coverlet 패키지](https://github.com/coverlet-coverage/coverlet)
   - [ ] [ReportGenerator 패키지](https://github.com/danielpalme/ReportGenerator)
+- CI/CD
+  - [ ] GitHub Actions
 
 <br/>
 
@@ -57,6 +64,10 @@
 - [ ] DDD | [Domain-Driven Design시작하기](https://www.youtube.com/watch?v=td5VRmxntmw&t)
 - [ ] DDD | [Domain-Driven Design, Amichai Mantinband](https://www.youtube.com/watch?v=8Z5IAkWcnIw&list=PLzYkqgWkHPKDpXETRRsFv2F9ht6XdAF3v)
 - [ ] 아키텍처 | [ASP.NET 6 REST API Following CLEAN ARCHITECTURE & DDD Tutorial, Amichai Mantinband](https://www.youtube.com/watch?v=fhM0V2N1GpY&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k)
+- [ ] 아키텍처 | [클린 아키텍처 애매한 부분 정해 드립니다.](https://forward.nhn.com/2022/sessions/24)
+- [ ] 아키텍처 | [Dooray! 모바일 앱의 클린 아키텍처 적용기](https://forward.nhn.com/2022/sessions/27)
+- [ ] DDD | [DDD 뭣이 중헌디?](https://forward.nhn.com/2022/sessions/38)
+- [ ] Enum | [How To Create Smart Enums in C# With Rich Behavior](https://www.youtube.com/watch?v=v6cYTcEfZ8A)
 
 ### 도서
 - [ ] [클린 아키텍처 ](http://www.yes24.com/Product/Goods/77283734)
@@ -69,12 +80,14 @@
 - [ ] [단위 테스트](http://www.yes24.com/Product/Goods/104084175)
 
 ### 문서
-- [ ] [클린 아키텍쳐 — 소스 코드 구조는 어떻게?](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90-%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EA%B5%AC%EC%A1%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-90b872745b41)
-- [ ] [클린 코드 — Cleaning Code to Domain Model](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%BD%94%EB%93%9C-cleaning-code-to-domain-model-eed66a83c0e5)
-- [ ] [Clean Architecture : Part 1 — Database vs Domain](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%ED%8C%8C%ED%8A%B81-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-vs-%EB%8F%84%EB%A9%94%EC%9D%B8-236c7008ac83)
-- [ ] [Clean Architecture : Part 2 — The Clean Architecture](https://justwrite99.medium.com/clean-architecture-part-2-the-clean-architecture-3e2666cdce83)
-- [ ] [클린 아키텍처 by 엉클 밥](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-by-%EC%97%89%ED%81%B4-%EB%B0%A5-a6a917ff6afc)
-- [ ] [Algorithm to Detect A tic tac toe Winner](https://jayeshkawli.ghost.io/tic-tac-toe/)
-- [ ] [Clean architecture series— Part 1](https://pereiren.medium.com/clean-architecture-series-part-1-f34ef6b04b62)
-- [ ] [Clean architecture series— Part 2](https://pereiren.medium.com/clean-architecture-series-part-2-56197c4b9d58)
-- [ ] [Clean architecture series— Part 3](https://pereiren.medium.com/clean-architecture-series-part-3-a0c150551e5f)
+- [ ] 아키텍처 | [클린 아키텍쳐 — 소스 코드 구조는 어떻게?](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90-%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EA%B5%AC%EC%A1%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-90b872745b41)
+- [ ] 아키텍처 | [클린 코드 — Cleaning Code to Domain Model](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%BD%94%EB%93%9C-cleaning-code-to-domain-model-eed66a83c0e5)
+- [ ] 아키텍처 | [Clean Architecture : Part 1 — Database vs Domain](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%ED%8C%8C%ED%8A%B81-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-vs-%EB%8F%84%EB%A9%94%EC%9D%B8-236c7008ac83)
+- [ ] 아키텍처 | [Clean Architecture : Part 2 — The Clean Architecture](https://justwrite99.medium.com/clean-architecture-part-2-the-clean-architecture-3e2666cdce83)
+- [ ] 아키텍처 | [클린 아키텍처 by 엉클 밥](https://justwrite99.medium.com/%ED%81%B4%EB%A6%B0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-by-%EC%97%89%ED%81%B4-%EB%B0%A5-a6a917ff6afc)
+- [ ] 아키텍처 | [Clean architecture series— Part 1](https://pereiren.medium.com/clean-architecture-series-part-1-f34ef6b04b62)
+- [ ] 아키텍처 | [Clean architecture series— Part 2](https://pereiren.medium.com/clean-architecture-series-part-2-56197c4b9d58)
+- [ ] 아키텍처 | [Clean architecture series— Part 3](https://pereiren.medium.com/clean-architecture-series-part-3-a0c150551e5f)
+- [ ] Enum | [Enum Alternatives in C#](https://ardalis.com/enum-alternatives-in-c/)
+- [ ] Enum | [How to implement a type-safe enum pattern in C#](https://www.infoworld.com/article/3198453/how-to-implement-a-type-safe-enum-pattern-in-c.html)
+- [ ] 알고리즘 | [Algorithm to Detect A tic tac toe Winner](https://jayeshkawli.ghost.io/tic-tac-toe/)

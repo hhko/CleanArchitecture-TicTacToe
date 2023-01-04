@@ -63,24 +63,6 @@ public class TicTacToeUseCaseTest
         ticTacToe.CanPlaceMarkerAt(rowToPlace, columnToPlace).Should().BeFalse();
     }
 
-    // 06. 이미 사용된 공간에 표시를 하려고 하면 에외가 발생한다.
-    [Fact]
-    public void Exception_Will_Be_Thrown_If_Player_Tries_To_Place_Marker_In_A_Taken_Square()
-    {
-        // Arrange
-        Row rowToPlace = Row.One;
-        Column columnToPlace = Column.One;
-        TicTacToeUseCase ticTacToe = new TicTacToeUseCase();
-
-        ticTacToe.PlaceMarkerAt(rowToPlace, columnToPlace);
-
-        // Act
-        Action act = () => ticTacToe.PlaceMarkerAt(rowToPlace, columnToPlace);
-
-        // Assert
-        act.Should().Throw<ApplicationException>();
-    }
-
     // 04. 플레이어 O가 플레이어 X가 표시를 한 후에 표시할 수 있다.
     [Fact]
     public void Player_O_Will_Be_Next_To_Take_A_Turn_After_Player_X_Has_Placed_A_Marker()
@@ -128,4 +110,90 @@ public class TicTacToeUseCaseTest
     //     // Assert
     //     result.Should().BeFalse();
     // }
+
+    // 06. 이미 사용된 공간에 표시를 하려고 하면 에외가 발생한다.
+    [Fact]
+    public void Exception_Will_Be_Thrown_If_Player_Tries_To_Place_Marker_In_A_Taken_Square()
+    {
+        // Arrange
+        Row rowToPlace = Row.One;
+        Column columnToPlace = Column.One;
+        TicTacToeUseCase ticTacToe = new TicTacToeUseCase();
+
+        ticTacToe.PlaceMarkerAt(rowToPlace, columnToPlace);
+
+        // Act
+        Action act = () => ticTacToe.PlaceMarkerAt(rowToPlace, columnToPlace);
+
+        // Assert
+        act.Should().Throw<ApplicationException>();
+    }
+
+    // 07-1. 플레이어 X가 한 행에 세 게의 X 표시를 모두 하면 플레이어 X가 승리한다.
+    [Fact]
+    public void If_Player_X_Gets_Three_Xs_In_A_Row_Then_The_Game_Is_Won_By_Player_X()
+    {
+        // Arrange
+        Row playerX_RowMove123 = Row.One;
+        Column playerX_ColumnMove1 = Column.One;
+        Column playerX_ColumnMove2 = Column.Two;
+        Column playerX_ColumnMove3 = Column.Three;
+
+        Row playerO_RowMove12 = Row.Two;
+        Column playerO_ColumnMove1 = Column.One;
+        Column playerO_ColumnMove2 = Column.Two;
+
+        TicTacToeUseCase ticTacToe = new TicTacToeUseCase();
+
+        // Act
+
+        // X |   |   |
+        //   |   |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerX_RowMove123, playerX_ColumnMove1);
+
+        // X |   |   |
+        // O |   |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerO_RowMove12, playerO_ColumnMove1);
+
+        // X | X |   |
+        // O |   |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerX_RowMove123, playerX_ColumnMove2);
+
+        // X | X |   |
+        // O | O |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerO_RowMove12, playerO_ColumnMove2);
+
+        // X | X | X |
+        // O | O |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerX_RowMove123, playerX_ColumnMove3);
+
+        // Asert
+        ticTacToe.Status().Should().Be(GameStatus.PlayerXWin);
+    }
+
+    // 07-2. 누군가 승리하거나 혹은 게임이 비기지 않은 이상 플레이어 X나 플레이어 O가 표수해야 할 순서인 상태가 있을 수 있다
+    [Fact]
+    public void The_Game_Status_Should_Be_Awaiting_Either_Player_X_Or_O_If_The_Game_Is_Not_Won_Or_Drawn()
+    {
+        // Arrange
+        Row playerXrowToPlace = Row.One;
+        Column playerXColumnToPlace = Column.One;
+
+        // Act
+        TicTacToeUseCase ticTacToe = new TicTacToeUseCase();
+
+        // Assert
+        ticTacToe.Status().Should().Be(GameStatus.AwaitingPlayerXToPlaceMarker);
+
+        // Act
+        ticTacToe.PlaceMarkerAt(playerXrowToPlace, playerXColumnToPlace);
+
+        // Assert
+        ticTacToe.Status().Should().Be(GameStatus.AwaitingPlayerOToPlaceMarker);
+    }
 }

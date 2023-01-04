@@ -47,4 +47,36 @@ public class TicTacToeUseCase
             _currentPlayer = Player.X;
         }
     }
+
+    public GameStatus Status()
+    {
+        if (IsAWinner(Player.X))
+            return GameStatus.PlayerXWin;
+        else if (IsAWinner(Player.O))
+            return GameStatus.PlayerOWin;
+        else if (WhoseTurn() == Player.X)
+            return GameStatus.AwaitingPlayerXToPlaceMarker;
+        else if (WhoseTurn() == Player.O)
+            return GameStatus.AwaitingPlayerOToPlaceMarker;
+        else
+            return GameStatus.GameDrawn;
+    }
+
+    private bool IsAWinner(Player player)
+    {
+        bool winner = false;
+
+        for (int row = Row.One; row <= Row.Three; row++)
+        {
+            if (_board[row, Column.One] == player
+                && _board[row, Column.Two] == player
+                && _board[row, Column.Three] == player)
+            {
+                winner = true;
+                break;
+            }
+        }
+
+        return winner;
+    }
 }

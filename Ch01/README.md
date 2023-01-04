@@ -1,5 +1,5 @@
 # Chapter 01. 기술 독립적인 객체지향 `Tic Tac Toe`
-> **기술 독립적인란?**  
+> **기술 독립적인란?**
 > - Core 레이어인 UseCases와 Entities 레이어만 구현한다.
 > - 구체적인 기술을 구현하는 Adapters(Presentation, Infrastructure) 레이어는 구현하지 않는다.
 
@@ -18,9 +18,7 @@
 <br/>
 
 ## 목표
-- 개발을 위한 **UseCase 단위 테스트 초안을 작성한다.**
-- UseCase 단위 테스트 초안을 기반으로 **UseCase와 Entity을 구현한다.**
-- 구현 과정속에서 **새로운 UseCase 단위 테스트를 발굴한다.**
+- Tic Tac Toe을 **UseCase 단위 테스트 기반으로 개발한다.**
 
 <br/>
 
@@ -85,7 +83,7 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
 - [x] 04. 플레이어 O가 플레이어 X가 표시를 한 후에 표시할 수 있다.
 - [x] 05. ~~플레이어는 존재하지 않는 공간에는 표시할 수 없다.~~
 - [x] 06. 이미 사용된 공간에 표시를 하려고 하면 에외가 발생한다.
-- [ ] 07. 플레이어 X가 한 행에 세 게의 X 표시를 모두 하면 플레이어 X가 승리한다.
+- [x] 07. 플레이어 X가 한 행에 세 게의 X 표시를 모두 하면 플레이어 X가 승리한다.
 - [ ] 08. 플레이어 X가 한 열에 세 게의 X 표시를 모두 하면 플레이어 X가 승리한다.
 - [ ] 09. 플레이어 X가 대각선으로 세 개의 X 표시를 모두 하면 플레이어 X가 승리한다.
 - [ ] 10. 모든 공간이 채워지고 승자가 없으면 게임은 무승부가 된다.
@@ -124,8 +122,16 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
     bool result = ticTacToe.CanPlaceMarkerAt(Row.FromValue(100), Column.FromValue(200));
     ```
 - [x] 06(03). 이미 사용된 공간에 표시를 하려고 하면 에외가 발생한다.
-```cs
+  ```cs
   public void Exception_Will_Be_Thrown_If_Player_Tries_To_Place_Marker_In_A_Taken_Square()
+  ```
+- [x] 07-1. 플레이어 X가 한 행에 세 게의 X 표시를 모두 하면 플레이어 X가 승리한다.
+  ```cs
+  public void If_Player_X_Gets_Three_Xs_In_A_Row_Then_The_Game_Is_Won_By_Player_X()
+  ```
+- [x] 07-2. 누군가 승리하거나 혹은 게임이 비기지 않은 이상 플레이어 X나 플레이어 O가 표수해야 할 순서인 상태가 있을 수 있다
+  ```cs
+  public void The_Game_Status_Should_Be_Awaiting_Either_Player_X_Or_O_If_The_Game_Is_Not_Won_Or_Drawn()
   ```
 
 <br/>
@@ -138,6 +144,7 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
 - Ardalis.SmartEnum switch 사용법 확인?
 - 단위 테스트 구현
 - 액션아이템과 구현 연동
+- if ... -> switch 구분 변경
 - VSCode task 통합 : 빌드, 테스트
 - VSCode Unit Test 확장 도구
 - VSCode Code Coverage
@@ -146,3 +153,21 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
 - GitHub CI/CD
 - Clean Architecture 다이어그램과 Layer 설명
 - UseCase 개념(Application Service)으로 리팩토링
+
+
+## nuget 명령
+### NuGET 패키지 복원이 정상적으로 안될 때
+```shell
+# dotnet build
+#   warning NU1803:
+#     You are running the 'restore' operation with an 'HTTP' source,
+#     'http://package.xyz.co.kr/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.
+
+# http://package.xyz.co.kr/nuget을 확인한다
+dotnet nuget list source
+
+# http://package.xyz.co.kr/nuget 이름으로 비활성화 한다
+dotnet nuget disable source 이름
+
+# dotnet build을 다시 수행한다
+```
