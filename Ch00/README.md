@@ -20,8 +20,10 @@
      Actors represent the role 
          that human users or other systems have in the interaction.
      ```
-1. **중심**
-   - 3. 기술 의존적인 코드 > 2. 유스 케이스 > 1. 기술 독립적인 코드
+1. **핵심**
+   - 1. 기술 독립적인 코드 `>` 2. 유스 케이스 `>` 3. 기술 의존적인 코드
+   - 핵심이란?
+     - 비즈니스 요구사항을 코드로 표현할 때 우선 순위
 1. **의존성 방향**
    - 기술 의존적인 코드(Adapters : 입력) `→` 유스 케이스 `→` 기술 독립적인 코드(Entities)
    - 기술 의존적인 코드(Adapters : 출력) `→` 유스 케이스 `→` 기술 독립적인 코드(Entities)
@@ -30,14 +32,14 @@
    - 기술 의존적인 코드(Adapters : 출력) `←(의존성 역전)` 유스 케이스 `→` 기술 독립적인 코드
 
 ## 레이어 용어
-- 기술 의존적인 코드 : `Adapter`
+- **기술 의존적인 코드 : `Adapter`**
   - 입력 인터페이스(Port) 구현 클래스 : `Input Adapter`
   - 출력 인터페이스(Port) 구현 클래스 : `Output Adapter`
-- 유스 케이스 : `Use Cases`
+- **유스 케이스 : `Use Cases`**
   - 기술 의존적인 코드의 입력 인터페이스 : `Input Port`
   - 기술 의존적인 코드의 출력 인터페이스 : `Output Port`
   - 사용 시나리오
-- 기술 독립적인 코드 : `Entities`
+- **기술 독립적인 코드 : `Entities`**
   - 동일성(identity) : `Entity`
   - 동등성(equality) : `Value Object`
   - `Domain Service`
