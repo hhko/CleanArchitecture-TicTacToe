@@ -1,24 +1,24 @@
 # 클린 아키텍처 도입기 Tic Tac Toe
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/400px-Tic_tac_toe.svg.png" width=15%/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/400px-Tic_tac_toe.svg.png" width=20%/>
 https://en.wikipedia.org/wiki/Tic-tac-toe
 
 ## 프로젝트
 - Part 1. 몸 풀기 코드
-  - [ ] [Chapter 00. 클린 아키텍처 준비](./Ch00/)
-  - [ ] Strongly Typed Enum Pattern
-  - [ ] Value Object
-  - [ ] Entity
-  - [ ] Domain Service
+  - [ ] [Chapter 01. 클린 아키텍처 준비](./Ch01/)
+  - [ ] Chapter 02. Strongly Typed Enum Pattern
+  - [ ] Chapter 03. Value Object
+  - [ ] Chapter 04. Entity
+  - [ ] Chapter 05. Domain Service
 - Part 2. 기술 독립적인 코드
-  - [ ] [Chapter 01. 객체지향 Tic Tac Toe](./Ch01/)
-  - [ ] Chapter 02. 함수형 Tic Tac Toe
-  - [ ] Chapter 03. 메시지지향 Tic Tac Toe
+  - [ ] [Chapter 06. 객체지향 Tic Tac Toe](./Ch06/)
+  - [ ] Chapter 07. 함수형 Tic Tac Toe
+  - [ ] Chapter 08. 메시지지향 Tic Tac Toe
 - Part 3. 기술 의존적인 코드
-  - [ ] Chapter 04. Repository Tic Tac Toe
-  - [ ] Chapter 05. Web UI Tic Tac Toe
-  - [ ] Chapter 06. Desktop UI Tic Tac Toe
-  - [ ] Chapter 07. Hybrid UI(Web & Desktop UI) Tic Tac Toe
+  - [ ] Chapter 09. Repository Tic Tac Toe
+  - [ ] Chapter 10. Web UI Tic Tac Toe
+  - [ ] Chapter 11. Desktop UI Tic Tac Toe
+  - [ ] Chapter 12. Hybrid UI(Web & Desktop UI) Tic Tac Toe
 
 <br/>
 

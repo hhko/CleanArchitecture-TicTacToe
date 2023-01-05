@@ -1,4 +1,6 @@
-﻿using TicTacToe.Entities;
+﻿using System.Numerics;
+using System.Reflection;
+using TicTacToe.Entities;
 
 namespace TicTacToe.UseCases;
 
@@ -66,6 +68,20 @@ public class TicTacToeUseCase
     {
         bool winner = false;
 
+        if (IsThreeInARowWiner(player)
+            || IsThreeInAColumnWiner(player)
+            || IsThreeInADiagonalWiner(player))
+        {
+            winner = true;
+        }
+
+        return winner;
+    }
+
+    private bool IsThreeInARowWiner(Player player)
+    {
+        bool winner = false;
+
         for (int row = Row.One; row <= Row.Three; row++)
         {
             if (_board[row, Column.One] == player
@@ -75,6 +91,45 @@ public class TicTacToeUseCase
                 winner = true;
                 break;
             }
+        }
+
+        return winner;
+    }
+
+    private bool IsThreeInAColumnWiner(Player player)
+    {
+        bool winner = false;
+
+        for (int column = Column.One; column <= Column.Three; column++)
+        {
+            if (_board[Row.One, column] == player
+                && _board[Row.Two, column] == player
+                && _board[Row.Three, column] == player)
+            {
+                winner = true;
+                break;
+            }
+        }
+
+        return winner;
+    }
+
+    private bool IsThreeInADiagonalWiner(Player player)
+    {
+        bool winner = false;
+
+        if (_board[Row.One, Column.One] == player
+            && _board[Row.Two, Column.Two] == player
+            && _board[Row.Three, Column.Three] == player)
+        {
+            winner = true;
+        }
+
+        if (_board[Row.One, Column.Three] == player
+            && _board[Row.Two, Column.Two] == player
+            && _board[Row.Three, Column.One] == player)
+        {
+            winner = true;
         }
 
         return winner;

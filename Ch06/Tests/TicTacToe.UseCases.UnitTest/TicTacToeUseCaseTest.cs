@@ -196,4 +196,100 @@ public class TicTacToeUseCaseTest
         // Assert
         ticTacToe.Status().Should().Be(GameStatus.AwaitingPlayerOToPlaceMarker);
     }
+
+    // 08. 플레이어 X가 한 열에 세 게의 X 표시를 모두 하면 플레이어 X가 승리한다.
+    [Fact]
+    public void If_Player_X_Gets_Three_Xs_In_A_Column_Then_The_Game_Is_Won_By_Player_X()
+    {
+        // Arrange
+        Column playerX_ColumnMove123 = Column.One;
+        Row playerX_RowMove1 = Row.One;
+        Row playerX_RowMove2 = Row.Two;
+        Row playerX_RowMove3 = Row.Three;
+
+        Column playerO_ColumnMove12 = Column.Two;
+        Row playerO_ColumnMove1 = Row.One;
+        Row playerO_ColumnMove2 = Row.Two;
+
+        TicTacToeUseCase ticTacToe = new TicTacToeUseCase();
+
+        // Act
+
+        // X |   |   |
+        //   |   |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerX_RowMove1, playerX_ColumnMove123);
+
+        // X | O |   |
+        //   |   |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerO_ColumnMove1, playerO_ColumnMove12);
+
+        // X | O |   |
+        // X |   |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerX_RowMove2, playerX_ColumnMove123);
+
+        // X | O |   |
+        // X | O |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerO_ColumnMove2, playerO_ColumnMove12);
+
+        // X | O |   |
+        // X | O |   |
+        // X |   |   |
+        ticTacToe.PlaceMarkerAt(playerX_RowMove3, playerX_ColumnMove123);
+
+        // Asert
+        ticTacToe.Status().Should().Be(GameStatus.PlayerXWin);
+    }
+
+    // 09. 플레이어 X가 대각선으로 세 개의 X 표시를 모두 하면 플레이어 X가 승리한다.
+    [Fact]
+    public void If_Player_X_Gets_Three_Xs_In_A_Diagonal_Then_The_Game_Is_Won_By_Player_X()
+    {
+        // Arrange
+        Row playerX_RowMove1 = Row.One;
+        Row playerX_RowMove2 = Row.Two;
+        Row playerX_RowMove3 = Row.Three;
+        Column playerX_ColumnMove1 = Column.One;
+        Column playerX_ColumnMove2 = Column.Two;
+        Column playerX_ColumnMove3 = Column.Three;
+
+        Row playerO_RowMove12 = Row.One;
+        Column playerO_ColumnMove1 = Column.Two;
+        Column playerO_ColumnMove2 = Column.Three;
+
+        TicTacToeUseCase ticTacToe = new TicTacToeUseCase();
+
+        // Act
+
+        // X |   |   |
+        //   |   |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerX_RowMove1, playerX_ColumnMove1);
+
+        // X | O |   |
+        //   |   |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerO_RowMove12, playerO_ColumnMove1);
+
+        // X | O |   |
+        //   | X |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerX_RowMove2, playerX_ColumnMove2);
+
+        // X | O | O |
+        //   | X |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerO_RowMove12, playerO_ColumnMove2);
+
+        // X | O | O |
+        //   | X |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerX_RowMove3, playerX_ColumnMove3);
+
+        // Asert
+        ticTacToe.Status().Should().Be(GameStatus.PlayerXWin);
+    }
 }
