@@ -10,15 +10,16 @@ https://en.wikipedia.org/wiki/Tic-tac-toe
   - [ ] Chapter 03. Value Object
   - [ ] Chapter 04. Entity
   - [ ] Chapter 05. Domain Service
+  - [ ] Chapter 06. Use Case
 - Part 2. 기술 독립적인 코드
-  - [ ] [Chapter 06. 객체지향 Tic Tac Toe](./Ch06/)
-  - [ ] Chapter 07. 함수형 Tic Tac Toe
-  - [ ] Chapter 08. 메시지지향 Tic Tac Toe
+  - [ ] [Chapter 07. 객체지향 Tic Tac Toe](./Ch06/)
+  - [ ] Chapter 08. 함수형 Tic Tac Toe
+  - [ ] Chapter 09. 메시지지향 Tic Tac Toe
 - Part 3. 기술 의존적인 코드
-  - [ ] Chapter 09. Repository Tic Tac Toe
-  - [ ] Chapter 10. Web UI Tic Tac Toe
-  - [ ] Chapter 11. Desktop UI Tic Tac Toe
-  - [ ] Chapter 12. Hybrid UI(Web & Desktop UI) Tic Tac Toe
+  - [ ] Chapter 10. Repository Tic Tac Toe
+  - [ ] Chapter 11. Web UI Tic Tac Toe
+  - [ ] Chapter 12. Desktop UI Tic Tac Toe
+  - [ ] Chapter 13. Hybrid UI(Web & Desktop UI) Tic Tac Toe
 
 <br/>
 
