@@ -21,7 +21,13 @@ public class TicTacToeUseCase
 
     public bool CanPlaceMarkerAt(Row row, Column column)
     {
-        return _board[row, column] == 0;
+        if (Status() == GameStatus.AwaitingPlayerXToPlaceMarker
+            || Status() == GameStatus.AwaitingPlayerOToPlaceMarker)
+        {
+            return _board[row, column] == 0;
+        }
+
+        return false;
     }
 
     public void PlaceMarkerAt(Row row, Column column)
@@ -56,6 +62,8 @@ public class TicTacToeUseCase
             return GameStatus.PlayerXWin;
         else if (IsAWinner(Player.O))
             return GameStatus.PlayerOWin;
+        else if (GameIsDrawn())
+            return GameStatus.GameDrawn;
         else if (WhoseTurn() == Player.X)
             return GameStatus.AwaitingPlayerXToPlaceMarker;
         else if (WhoseTurn() == Player.O)
@@ -133,5 +141,24 @@ public class TicTacToeUseCase
         }
 
         return winner;
+    }
+
+    private bool GameIsDrawn()
+    {
+        bool allSquaresUsed = true;
+
+        foreach (Row row in Row.List)
+        {
+            foreach (Column column in Column.List)
+            {
+                if (_board[row, column] == 0)
+                { 
+                    allSquaresUsed = false; 
+                    break; 
+                }
+            }
+        }
+
+        return allSquaresUsed;
     }
 }

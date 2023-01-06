@@ -6,13 +6,6 @@ namespace TicTacToe.UseCases.UnitTest;
 
 public class TicTacToeUseCaseTest
 {
-    private readonly ITestOutputHelper _output;
-
-    public TicTacToeUseCaseTest(ITestOutputHelper output)
-    {
-        _output = output;
-    }
-
     // 01-1. 먼저 플레이를 시작하는 플레이어는 X이다.
     [Fact]
     public void Player_X_Is_The_First_To_Place_A_Marker()
@@ -172,7 +165,7 @@ public class TicTacToeUseCaseTest
         //   |   |   |
         ticTacToe.PlaceMarkerAt(playerX_RowMove123, playerX_ColumnMove3);
 
-        // Asert
+        // Assert
         ticTacToe.Status().Should().Be(GameStatus.PlayerXWin);
     }
 
@@ -186,13 +179,11 @@ public class TicTacToeUseCaseTest
 
         // Act
         TicTacToeUseCase ticTacToe = new TicTacToeUseCase();
-
         // Assert
         ticTacToe.Status().Should().Be(GameStatus.AwaitingPlayerXToPlaceMarker);
 
         // Act
         ticTacToe.PlaceMarkerAt(playerXrowToPlace, playerXColumnToPlace);
-
         // Assert
         ticTacToe.Status().Should().Be(GameStatus.AwaitingPlayerOToPlaceMarker);
     }
@@ -240,7 +231,7 @@ public class TicTacToeUseCaseTest
         // X |   |   |
         ticTacToe.PlaceMarkerAt(playerX_RowMove3, playerX_ColumnMove123);
 
-        // Asert
+        // Assert
         ticTacToe.Status().Should().Be(GameStatus.PlayerXWin);
     }
 
@@ -286,10 +277,80 @@ public class TicTacToeUseCaseTest
 
         // X | O | O |
         //   | X |   |
-        //   |   |   |
+        //   |   | X |
         ticTacToe.PlaceMarkerAt(playerX_RowMove3, playerX_ColumnMove3);
 
-        // Asert
+        // Assert
         ticTacToe.Status().Should().Be(GameStatus.PlayerXWin);
+    }
+
+    // 10-1. 모든 공간이 채워지고 승자가 없으면 게임은 무승부가 된다.
+    [Fact]
+    public void When_All_Squares_Are_Full_And_There_Is_No_Winner_The_Game_Is_A_Draw()
+    {
+        // Arrange
+        TicTacToeUseCase ticTacToe = new TicTacToeUseCase();
+
+        // Act
+        // X | O | X |
+        // O | X | O |
+        // X | O | X |
+        foreach (Row currentRow in Row.List)
+        {
+            ticTacToe.PlaceMarkerAt(currentRow, Column.One);
+            ticTacToe.PlaceMarkerAt(currentRow, Column.Two);
+            ticTacToe.PlaceMarkerAt(currentRow, Column.Three);
+        }
+
+        // Assert
+        ticTacToe.Status().Should().Be(GameStatus.GameDrawn);
+    }
+
+    // 10-2. 게임에서 누군가 승리한 후에는 더 이상 게임을 진행할 수 없다.
+    [Fact]
+    public void A_Player_Can_Make_No_More_Moves_After_A_Game_Is_Won()
+    {
+        // Arrange
+        Column playerX_ColumnMove123 = Column.One;
+        Row playerX_RowMove1 = Row.One;
+        Row playerX_RowMove2 = Row.Two;
+        Row playerX_RowMove3 = Row.Three;
+
+        Column playerO_ColumnMove12 = Column.Two;
+        Row playerO_ColumnMove1 = Row.One;
+        Row playerO_ColumnMove2 = Row.Two;
+
+        TicTacToeUseCase ticTacToe = new TicTacToeUseCase();
+
+        // Act
+
+        // X |   |   |
+        //   |   |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerX_RowMove1, playerX_ColumnMove123);
+
+        // X | O |   |
+        //   |   |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerO_ColumnMove1, playerO_ColumnMove12);
+
+        // X | O |   |
+        // X |   |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerX_RowMove2, playerX_ColumnMove123);
+
+        // X | O |   |
+        // X | O |   |
+        //   |   |   |
+        ticTacToe.PlaceMarkerAt(playerO_ColumnMove2, playerO_ColumnMove12);
+
+        // X | O |   |
+        // X | O |   |
+        // X |   |   |
+        ticTacToe.PlaceMarkerAt(playerX_RowMove3, playerX_ColumnMove123);
+
+        // Assert
+        ticTacToe.Status().Should().Be(GameStatus.PlayerXWin);
+        ticTacToe.CanPlaceMarkerAt(Row.Three, Column.Three).Should().BeFalse();
     }
 }

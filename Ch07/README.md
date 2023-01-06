@@ -86,7 +86,7 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
 - [x] 07. 플레이어 X가 한 행에 세 게의 X 표시를 모두 하면 플레이어 X가 승리한다.
 - [x] 08. 플레이어 X가 한 열에 세 게의 X 표시를 모두 하면 플레이어 X가 승리한다.
 - [x] 09. 플레이어 X가 대각선으로 세 개의 X 표시를 모두 하면 플레이어 X가 승리한다.
-- [ ] 10. 모든 공간이 채워지고 승자가 없으면 게임은 무승부가 된다.
+- [x] 10. 모든 공간이 채워지고 승자가 없으면 게임은 무승부가 된다.
 
 ### UseCase 단위 테스트 최종
 - [x] 01-1. 먼저 플레이를 시작하는 플레이어는 X이다.
@@ -141,22 +141,27 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
   ```cs
   public void If_Player_X_Gets_Three_Xs_In_A_Diagonal_Then_The_Game_Is_Won_By_Player_X()
   ```
+- [x] 10-1. 모든 공간이 채워지고 승자가 없으면 게임은 무승부가 된다.
+  ```cs
+  public void When_All_Squares_Are_Full_And_There_Is_No_Winner_The_Game_Is_A_Draw()
+  ```
+- [x] 10-2. 게임에서 누군가 승리한 후에는 더 이상 게임을 진행할 수 없다.
+  ```cs
+  public void A_Player_Can_Make_No_More_Moves_After_A_Game_Is_Won()
+  ```
 
 <br/>
 
 ## TODO
-- 단위 테스트 구현
-- 액션아이템과 구현 연동
-- if ... -> switch 구분 변경
+- 코디 리팩토링
 - VSCode task 통합 : 빌드, 테스트
 - VSCode Unit Test 확장 도구
 - VSCode Code Coverage
 - dotnet CLI test 로그
+- dotnet CLI watch
 - dotnet CLI Code Coverage
 - GitHub CI/CD
 - Clean Architecture 다이어그램과 Layer 설명
-- UseCase 개념(Application Service)으로 리팩토링
-
 
 ## nuget 명령
 ### NuGET 패키지 복원이 정상적으로 안될 때
