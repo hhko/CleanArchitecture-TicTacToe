@@ -12,7 +12,7 @@ https://en.wikipedia.org/wiki/Tic-tac-toe
   - [ ] Chapter 05. Domain Service
   - [ ] Chapter 06. Use Case
 - Part 2. 기술 독립적인 코드
-  - [ ] [Chapter 07. 객체지향 Tic Tac Toe](./Ch06/)
+  - [ ] [Chapter 07. 객체지향 Tic Tac Toe](./Ch07/)
   - [ ] Chapter 08. 함수형 Tic Tac Toe
   - [ ] Chapter 09. 메시지지향 Tic Tac Toe
 - Part 3. 기술 의존적인 코드
