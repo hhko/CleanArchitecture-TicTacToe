@@ -163,13 +163,14 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
 - GitHub CI/CD
 - Clean Architecture 다이어그램과 Layer 설명
 
-## nuget 명령
-### NuGET 패키지 복원이 정상적으로 안될 때
+## NuGet 명령
+### NuGet 패키지 복원이 정상적으로 안될 때
 ```shell
 # dotnet build
 #   warning NU1803:
-#     You are running the 'restore' operation with an 'HTTP' source,
-#     'http://package.xyz.co.kr/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source.
+#     You are running the 'restore' operation with an 'HTTP' source, 'http://package.xyz.co.kr/nuget'.
+#     Non-HTTPS access will be removed in a future version.
+#     Consider migrating to an 'HTTPS' source.
 
 # http://package.xyz.co.kr/nuget을 확인한다
 dotnet nuget list source
@@ -178,4 +179,41 @@ dotnet nuget list source
 dotnet nuget disable source 이름
 
 # dotnet build을 다시 수행한다
+```
+
+### CodeCoverage
+```shell
+dotnet tool install -g coverlet.console
+dotnet tool list -g
+coverlet .\bin\Debug\net6.0\{단위 테스트 프로젝트명}.dll --target "dotnet" --targetargs "test --no-build"
+  coverage.json
+
+----
+using System.Diagnostics.CodeAnalysis;
+[ExcludeFromCodeCoverage]
+
+--exclude "[*]네임스페이스*"
+----
+
+coverlet.collector
+dotnet test --collect:"XPlat Code Coverage"
+TestResults
+  GUID
+    .xml
+dotnet tool install -g dotnet-reportgenerator-globaltool
+reportgenerator 
+  -reports:".\TestResults\ ... \ ... .xml"
+  -targetdir:"coverageresults"
+  -reporttypes:Html
+
+
+dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage
+
+\3f99ceca-ba0a-43ef-a7bf-4e196f3341a2
+  \coverage.cobertura.xml
+\고형호_HHKO-LABTOP_2023-01-07_22_46_17
+  \In
+    \HHKO-LABTOP
+      \coverage.cobertura.xml
+고형호_HHKO-LABTOP_2023-01-07_22_46_17.trx
 ```

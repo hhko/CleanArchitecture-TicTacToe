@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\TicTacToe.Entities\TicTacToe.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
