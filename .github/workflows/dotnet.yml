@@ -37,4 +37,3 @@ jobs:
         hide_complexity: true
         indicators: true
         output: both
-        thresholds: '60 80'
