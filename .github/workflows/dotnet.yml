@@ -13,24 +13,23 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet-version: [ '3.0', '3.1.x', '5.0.x' ]
-
-      steps:
-        - uses: actions/checkout@v3
-        - name: Setup dotnet
-          uses: actions/setup-dotnet@v3
-          with:
-            dotnet-version: ${{ matrix.dotnet-version }}
-        - name: Install dependencies
-          run: dotnet restore ./Ch07/TicTacToe.sln
-        - name: Test with dotnet
-          run: dotnet test ./Ch07/TicTacToe.sln --logger trx --results-directory "./Ch07/TestResults-${{ matrix.dotnet-version }}"
-        - name: check
-          run: ls ./Ch07
-        - name: Upload dotnet test results
-          uses: actions/upload-artifact@v3
-          with:
-            name: dotnet-results-${{ matrix.dotnet-version }}
-            path: ./Ch07/TestResults-${{ matrix.dotnet-version }}
-          # Use always() to always run this step to publish test results when there are test failures
-          if: ${{ always() }}
+        dotnet-version: [ '6.0.x' ]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+    - name: Install dependencies
+      run: dotnet restore ./Ch07/TicTacToe.sln
+    - name: Test with dotnet
+      run: dotnet test ./Ch07/TicTacToe.sln --logger trx --results-directory "./Ch07/TestResults-${{ matrix.dotnet-version }}"
+    - name: check
+      run: ls ./Ch07
+    - name: Upload dotnet test results
+      uses: actions/upload-artifact@v3
+      with:
+        name: dotnet-results-${{ matrix.dotnet-version }}
+        path: ./Ch07/TestResults-${{ matrix.dotnet-version }}
+        # Use always() to always run this step to publish test results when there are test failures
+        if: ${{ always() }}
