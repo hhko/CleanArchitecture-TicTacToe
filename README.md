@@ -102,3 +102,4 @@ https://en.wikipedia.org/wiki/Tic-tac-toe
 - [ ] Enum | [Enum Alternatives in C#](https://ardalis.com/enum-alternatives-in-c/)
 - [ ] Enum | [How to implement a type-safe enum pattern in C#](https://www.infoworld.com/article/3198453/how-to-implement-a-type-safe-enum-pattern-in-c.html)
 - [ ] 알고리즘 | [Algorithm to Detect A tic tac toe Winner](https://jayeshkawli.ghost.io/tic-tac-toe/)
+- [ ] GitHub | [Code Coverage Summary](https://github.com/irongut/CodeCoverageSummary)
