@@ -33,6 +33,9 @@ jobs:
         cd ./Ch07
         pwd
         ls
+        cd ./TestResults-6.0.x
+        pwd
+        ls
         cd ./coverage
         pwd
         ls
