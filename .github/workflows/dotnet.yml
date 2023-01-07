@@ -32,10 +32,20 @@ jobs:
       
     - name: Copy Coverage To Predictable Location
       run: |
+           cd ..
            pwd
            ls
-           cd ./Ch07/coverage
+           cd CleanArchitecture-TicTacToe
+           pwd
            ls
+           cd ./Ch07
+           pwd
+           ls
+           cd coverage
+           pwd
+           ls
+           cd ../..
+           pwd
            cp ./Ch07/coverage/*/coverage.cobertura.xml ./Ch07/coverage/coverage.cobertura.xml
 
     - name: Code Coverage Summary Report
