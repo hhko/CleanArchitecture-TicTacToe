@@ -22,14 +22,10 @@ jobs:
         dotnet-version: ${{ matrix.dotnet-version }}
     - name: Install dependencies
       run: dotnet restore ./Ch07/TicTacToe.sln
+    - name: Build with dotnet
+      run: dotnet build ./Ch07/TicTacToe.sln --configuration Release
     - name: Test with dotnet
       run: dotnet test ./Ch07/TicTacToe.sln --logger trx --results-directory "./Ch07/TestResults-${{ matrix.dotnet-version }}"
     - name: check
       run: ls ./Ch07
-    - name: Upload dotnet test results
-      uses: actions/upload-artifact@v3
-      with:
-        name: dotnet-results-${{ matrix.dotnet-version }}
-        path: ./Ch07/TestResults-${{ matrix.dotnet-version }}
-        # Use always() to always run this step to publish test results when there are test failures
-        if: ${{ always() }}
+
