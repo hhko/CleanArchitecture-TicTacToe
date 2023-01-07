@@ -27,7 +27,15 @@ jobs:
     - name: Test
       run: dotnet test ./Ch07/TicTacToe.sln --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory "./Ch07/TestResults-${{ matrix.dotnet-version }}"
     - name: ls
-      run: ls -alR ./Ch07 | grep .xml
+      run: |
+        pwd
+        ls -alR ./Ch07 | grep .xml
+        cd ./Ch07
+        pwd
+        ls
+        cd ./coverage
+        pwd
+        ls
     - name: Code Coverage Report
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
