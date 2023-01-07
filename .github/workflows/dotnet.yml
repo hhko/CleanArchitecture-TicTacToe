@@ -33,7 +33,10 @@ jobs:
     - name: Copy Coverage To Predictable Location
       run: |
            pwd
-           cp ./CleanArchitecture-TicTacToe/Ch07/coverage/*/coverage.cobertura.xml ./CleanArchitecture-TicTacToe/Ch07/coverage/coverage.cobertura.xml
+           ls
+           cd ./Ch07/coverage
+           ls
+           cp ./Ch07/coverage/*/coverage.cobertura.xml ./Ch07/coverage/coverage.cobertura.xml
 
     - name: Code Coverage Summary Report
       uses: irongut/CodeCoverageSummary@v1.3.0
