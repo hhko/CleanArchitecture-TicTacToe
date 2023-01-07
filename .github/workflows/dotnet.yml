@@ -28,4 +28,9 @@ jobs:
       run: dotnet test ./Ch07/TicTacToe.sln --logger trx --results-directory "./Ch07/TestResults-${{ matrix.dotnet-version }}"
     - name: check
       run: ls ./Ch07
+    - name: Upload dotnet test results
+      uses: actions/upload-artifact@v3
+      with:
+        name: dotnet-results-${{ matrix.dotnet-version }}
+        path: ./Ch07/TestResults-${{ matrix.dotnet-version }}
 
