@@ -25,12 +25,6 @@ jobs:
     - name: Build with dotnet
       run: dotnet build ./Ch07/TicTacToe.sln --configuration Release
     - name: Test with dotnet
-      run: dotnet test ./Ch07/TicTacToe.sln --logger trx --results-directory "./Ch07/TestResults-${{ matrix.dotnet-version }}"
-    - name: check
-      run: ls ./Ch07
-    - name: Upload dotnet test results
-      uses: actions/upload-artifact@v3
-      with:
-        name: dotnet-results-${{ matrix.dotnet-version }}
-        path: ./Ch07/TestResults-${{ matrix.dotnet-version }}
-
+      run: dotnet test ./Ch07/TicTacToe.sln --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory --results-directory "./Ch07/TestResults-${{ matrix.dotnet-version }}"
+    - name: ls
+      run: ls -alR ./Ch07 | grep .xml
