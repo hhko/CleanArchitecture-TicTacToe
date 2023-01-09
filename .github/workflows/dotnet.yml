@@ -19,16 +19,26 @@ jobs:
     steps:
     # 체크 아웃
     - uses: actions/checkout@v3
+
+    # .NET 버전별 구성
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
+
+    # 솔루션 .NuGet 패키지 복원
     - name: Restore Dependencies
       run: dotnet restore $SOLUTION_FILE
+
+    # 솔루션 빌드
     - name: Build
       run: dotnet build $SOLUTION_FILE --configuration Release --no-restore
+
+    # 솔루션 테스트
     - name: Test
       run: dotnet test $SOLUTION_FILE --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory "./Ch07/TestResults-${{ matrix.dotnet-version }}"
+
+    # 솔루션 코드 커버리지
     - name: Code Coverage Report
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
@@ -41,11 +51,27 @@ jobs:
         indicators: true
         output: both
         thresholds: '60 80'
+
+    # 코드 커버리지를 PR에 추가
     - name: Add Coverage PR Comment
       uses: marocchino/sticky-pull-request-comment@v2
       if: github.event_name == 'pull_request'
       with:
         recreate: true
         path: code-coverage-results.md
+
+    # 코드 커러비지 결과를 Action에 추가
     - name: Add Coverage Job Summary
       run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+
+    # 출판
+    - name: Publish
+      shell: bash
+      run: |
+        tag=$(git describe --tags --abbrev=0)
+        release_name="App-$tag-${{ matrix.target }}"
+        release_dotnet="App-$tag-${{ matrix.dotnet-version }}"
+
+        echo $tag
+        echo $release_name
+        echo $release_dotnet
