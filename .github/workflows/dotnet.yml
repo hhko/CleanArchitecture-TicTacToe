@@ -64,10 +64,15 @@ jobs:
     - name: Add Coverage Job Summary
       run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
 
-    - name: GitHub Tag Name example
+    - name: Set output
+      id: vars
+      run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
+    - name: Check output
+      env:
+        RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
       run: |
-         echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
-         echo "Tag name from github.ref_name: ${{  github.ref_name }}"
+        echo $RELEASE_VERSION
+        echo ${{ steps.vars.outputs.tag }}
          
         
     # 출판
