@@ -64,12 +64,18 @@ jobs:
     - name: Add Coverage Job Summary
       run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
 
+    - name: Get version from tag
+      id: tag_name
+      shell: bash
+      run: |
+        echo ::set-output name=current_version::${GITHUB_REF#refs/tags/v}
+        echo ${{ steps.tag_name.outputs.current_version }}
+        
     # 출판
     - name: Publish
       shell: bash
       run: |
         tag=$(git describe --tags --abbrev=0)
-        release_name="App-$tag-${{ matrix.target }}"
         release_dotnet="App-$tag-${{ matrix.dotnet-version }}"
 
         echo $tag
