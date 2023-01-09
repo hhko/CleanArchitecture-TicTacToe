@@ -153,6 +153,13 @@ dotnet add .\TicTacToe.UseCases.UnitTest\ package FluentAssertions --version 6.8
 <br/>
 
 ## TODO
+- GitHub Actions
+  - https://stackoverflow.com/questions/58177786/get-the-current-pushed-tag-in-github-actions
+  - OS matrix
+  - on tag 조건
+  - 파일 zip
+  - 캐시
+  - 릴리스 노트
 - 코디 리팩토링
 - GitHub Actions : badge, ubuntu 버전, ReportGenerator, Ch0x 이름 추가?, PR 확인?
 - VSCode task 통합 : 빌드, 테스트
