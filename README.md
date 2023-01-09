@@ -1,4 +1,5 @@
 # 클린 아키텍처 도입기 Tic Tac Toe
+![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/hhko/CleanArchitecture-TicTacToe/dotnet.yml)
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/400px-Tic_tac_toe.svg.png" width=20%/>
 https://en.wikipedia.org/wiki/Tic-tac-toe
@@ -12,7 +13,7 @@ https://en.wikipedia.org/wiki/Tic-tac-toe
   - [ ] Chapter 05. Domain Service
   - [ ] Chapter 06. Use Case
 - Part 2. 기술 독립적인 코드
-  - [ ] [Chapter 07. 객체지향 Tic Tac Toe](./Ch06/)
+  - [ ] [Chapter 07. 객체지향 Tic Tac Toe](./Ch07/)
   - [ ] Chapter 08. 함수형 Tic Tac Toe
   - [ ] Chapter 09. 메시지지향 Tic Tac Toe
 - Part 3. 기술 의존적인 코드
@@ -104,3 +105,4 @@ https://en.wikipedia.org/wiki/Tic-tac-toe
 - [ ] 알고리즘 | [Algorithm to Detect A tic tac toe Winner](https://jayeshkawli.ghost.io/tic-tac-toe/)
 - [ ] GitHub | [Code Coverage Summary](https://github.com/irongut/CodeCoverageSummary)
 - [ ] GitHub | [GitHub Actions: Publish Code Coverage Summary to Pull Requests](https://josh-ops.com/posts/github-code-coverage/)
+- [ ] Badge | [Shields](https://shields.io/)
