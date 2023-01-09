@@ -68,13 +68,13 @@ jobs:
       id: tag_name
       shell: bash
       run: |
-        echo ::set-output name=current_version::${GITHUB_REF#refs/tags/v}
-        echo ${{ steps.tag_name.outputs.current_version }}
+        echo "current_version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
         
     # 출판
     - name: Publish
       shell: bash
       run: |
+        echo "${{ output.current_version }}"
         tag=$(git describe --tags --abbrev=0)
         release_dotnet="App-$tag-${{ matrix.dotnet-version }}"
 
